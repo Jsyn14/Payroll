@@ -1,0 +1,90 @@
+# Identify the variables for the program
+# empId, fname, lname, Mname,grossPay, netPay, payRate, hoursWorked, date, time, payroll period, Vachrs, hrsperweek, hrsout
+#stateTax, fedTax, ficaTax,
+#checksigner, fname, lname,paidtotheorderof,
+# Identify constants
+#checksigner = Richard Dangley
+#deduct = 100,
+# stateTaxrate = 0.05, fedTaxrate = 0.02,
+#ficaTaxrate = 0.027
+#bonusrates = 0.5
+#Vachrs = 320
+#hrsperweek = 40
+'''
+identify any equations and formulas
+    #bonusrate = grossPay * bonusrate
+    #grossPay = payRate * hoursWorked
+    #netPay = grossPay - ( taxes + deduct)
+    #taxes = fedTax + ficaTax + stateTax
+    #fedTax = grossPay * fedTaxrate
+    #ficaTax = grossPay * ficaTaxrate
+    #stateTax = grossPay * stateTaxrate
+    #Vachrs = 320
+    #hrsout = hrsperweek - Vachrs)
+
+'''
+#convert the algorithm to Python Code statements (or whatever language you're using)
+# creating constants below
+stateTaxrate = float(0.05)
+fedTaxrate = float(0.02)
+ficaTaxrate = float(0.0765)
+deduct = float(100.00)
+bonusrate = (0.5)
+Vachrs= (320)
+hrsperweek = (40)
+# prompt the user for the data and assigning the value to the variables
+Date= input("Check Date:")
+Time = input("Time:")
+input("Employee ID#")
+fname = input("First Name:")
+lname = input("Last Name:")
+Mname = input("Middle Initial:")
+print("")
+payrollperiod = input("Enter Pay period start date:")
+payrollperiod = input("Enter Pay period end date:")
+print("      ")
+hrsperweek = input("Hours Avaliable to work:")
+hoursWorked = float (input("Enter Hours Worked:"))
+payRate = float(input("Enter Wages:"))
+bonusrate = float (input("Enter bouns/ Over Time:"))
+Vachrs = input("Vac Used:")
+
+# perform calculations
+bonusrate = payRate * bonusrate
+grossPay = payRate * hoursWorked # calculating 
+fedTax = grossPay * fedTaxrate      # calculating 
+ficaTax = grossPay * ficaTaxrate    # calculating 
+stateTax = grossPay * stateTaxrate  # calculating 
+taxes = fedTax + ficaTax + stateTax # calculating 
+netPay = grossPay - ( taxes + deduct)   # calculating 
+#displaying the output
+print("")
+print(">>>>>>Richard Dangleys Meats<<<<<<<")
+print("A That's what She said production")
+print("Check Date & Time:",Date,"",Time)
+print(payrollperiod)
+print("________________________________________")
+print("Gross Pay    |     Federal Tax") 
+print("________________________________________")
+print(grossPay,"            ",format(fedTax, ".2f"))
+print("________________________________________")
+print("Gross Pay ",  "       ",format(grossPay, ".2f"),format(fedTax, ".2f"))
+print("Bonus/Over Time:", " ",bonusrate)
+print("Vac Used","         ",Vachrs)
+print("________________________________________")
+print("Gross Pay    |     Federal Tax") 
+print("________________________________________")
+print(format(grossPay, ".2f"),"           ",  format(fedTax, ".2f")) 
+print("________________________________________")
+print("Gross Pay = ",  format(grossPay, ".2f"),format(fedTax, ".2f"))
+print("Gross Pay = ", grossPay)
+print(" federal Taxes = ", fedTax)
+print(" federal Taxes = ", format(fedTax, ".2f"))
+print("State Taxes =",stateTaxrate)
+print("State Taxes = ", format(stateTax, ".2f"))
+print("FICA =", ficaTax)
+print(" FICA = ", format(ficaTax, ".2f"))
+print("Net Pay = ", netPay)
+print(" Net Pay = ", format(netPay, ".2f"))
+print("Deductions =", deduct)
+print(" Deductions = ", format(deduct, ".2f"))
